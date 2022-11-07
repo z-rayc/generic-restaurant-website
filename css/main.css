@@ -152,7 +152,49 @@ nav a:hover::before {
 .logo {
     height: 3em;
     width: auto;
-    margin: 0.5em;
     border-radius: 50%;
-    display: block;
+}
+
+/* Banner */
+.banner-container {
+    width: 100%;
+    height: 20rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(var(--clr-neutral-1), 0.7) url(../images/banner.jpg);
+    background-size: cover;
+    background-position: 50% 25%;
+}
+
+.banner-text > hr {
+    background: linear-gradient(to right, rgba(var(--clr-primary-2), 0), rgba(var(--clr-primary-2), 1), rgba(var(--clr-primary-2), 0));
+}
+
+.banner-text > h1 {
+    color: rgb(var(--clr-primary-2));
+}
+
+.banner-text > p {
+    color: rgb(var(--clr-neutral-2));
+    text-align: center;
+}
+
+.img-overlay {
+    background-blend-mode: darken;
+}
+
+.banner-container > figcaption,
+.banner-container > figcaption > a {
+    color: rgba(var(--clr-neutral-2), 0.5);
+}
+
+.banner-container > figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 }
