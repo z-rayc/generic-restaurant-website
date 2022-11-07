@@ -4,9 +4,9 @@
  --clr-neutral-1: 0, 0, 0; /* Black */
  --clr-neutral-2: 255, 255, 255; /* White */
  --clr-neutral-3: 50, 50, 50; /* Dark Grey */
- --clr-primary-1: 46, 13, 2; /* Dark Chocolate */
- --clr-primary-2: 242, 228, 215; /* Cream */
- --clr-secondary-1: 58, 119, 143; /* Denim Blue */
+ --clr-primary-1: 45, 15, 0; /* Dark Chocolate */
+ --clr-primary-2: 240, 230, 215; /* Cream */
+ --clr-secondary-1: 220, 50, 10; /* Hot Sauce */
 
  /* Fonts */
  --ff-primary: 'Roboto', 'Arial', sans-serif;
@@ -97,6 +97,15 @@ nav a::before {
         background-color 350ms ease;
 }
 
+/* TODO: The active page in the nav bar is marked.
+    Use JS(?) to mark a link as active in the class */
+
+nav a:hover::before {
+    width: 100%;
+    left: 0;
+    background-color: rgb(var(--clr-neutral-2));
+}
+
 figcaption {
     text-align: center;
     margin: 0.5em 1em;
@@ -112,13 +121,7 @@ figcaption a {
     text-decoration: underline;
 }
 
-/* TODO: The active page in the nav bar is marked.
-    Use JS(?) to mark a link as active in the class */
 
-nav a:hover::before {
-    width: 100%;
-    left: 0;
-    background-color: rgb(var(--clr-neutral-2));
 }
 
 /* || SITEWIDE */
