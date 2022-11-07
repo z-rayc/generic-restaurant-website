@@ -197,4 +197,33 @@ nav a:hover::before {
     left: 0;
 }
 
+.img-medium {
+    width: max(50vw, 300px);
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Main */
+
+.container {
+    padding: 0.5rem 2rem;
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 50em) {
+    .split {
+        flex-direction: row;
+    }
+
+    .split > * { /* Every child of .split has equal width */
+        flex-basis: 100%;
+    }
+
+    .split > * + * { /* Any element that has a sibling before it */
+        margin-left: 2em;
+    }
 }
