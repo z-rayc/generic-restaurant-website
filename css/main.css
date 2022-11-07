@@ -1,14 +1,15 @@
 /* || VARAIABLES */
 :root {
  /* Colours */
- --clr-neutral-1: rgb(0, 0, 0);
- --clr-neutral-2: rgb(255, 255, 255);
- --clr-primary-1: rgb(46, 13, 2);
- --clr-primary-2: rgb(243, 235, 227);
- --clr-secondary-1: rgb(58, 119, 143);
+ --clr-neutral-1: 0, 0, 0; /* Black */
+ --clr-neutral-2: 255, 255, 255; /* White */
+ --clr-neutral-3: 50, 50, 50; /* Dark Grey */
+ --clr-primary-1: 46, 13, 2; /* Dark Chocolate */
+ --clr-primary-2: 242, 228, 215; /* Cream */
+ --clr-secondary-1: 58, 119, 143; /* Denim Blue */
 
  /* Fonts */
- --ff-primary: 'Arial', sans-serif;
+ --ff-primary: 'Roboto', 'Arial', sans-serif;
  --ff-secondary: 'Calibri', sans-serif;
  --ff-accent: 'Avant Garde', serif;
 }
@@ -25,8 +26,8 @@ body {
     font-family: var(--ff-primary);
     font-weight: 400;
     line-height: 1.5;
-    color: var(--clr-neutral-1);
-    background-color: var(--clr-primary-2);
+    color: rgb(var(--clr-neutral-1));
+    background-color: rgb(var(--clr-primary-2));
 }
 
 h1,
@@ -34,12 +35,12 @@ h2,
 h3,
 h4 {
     margin: 0 0.1em;
-    color: var(--clr-primary-1);
+    color: rgb(var(--clr-primary-1));
     font-family: var(--ff-accent);
 }
 
 header {
-    background-color: var(--clr-primary-1);
+    background-color: rgb(var(--clr-primary-1));
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,7 +57,7 @@ nav ul {
 nav a {
     position: relative;
     text-decoration: none;
-    color: var(--clr-neutral-2);
+    color: rgb(var(--clr-neutral-2));
     font-family: var(--ff-secondary);
     text-transform: uppercase;
 }
@@ -77,7 +78,7 @@ nav a::before {
 nav a:hover::before {
     width: 100%;
     left: 0;
-    background-color: var(--clr-neutral-2);
+    background-color: rgb(var(--clr-neutral-2));
 }
 
 main {
