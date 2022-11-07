@@ -125,6 +125,11 @@ figcaption a {
 }
 
 /* || SITEWIDE */
+/* Navigation */
+.highlight {
+    color: rgb(var(--clr-secondary-1));
+}
+
 #skip-navigation {
     position: absolute;
     left: 6em;
@@ -201,13 +206,12 @@ figcaption a {
 }
 
 .img-medium {
-    width: max(50vw, 300px);
+    width: max(50vw, 250px);
     height: auto;
     margin: 0 auto;
 }
 
 /* Main */
-
 .container {
     padding: 0.5rem 2rem;
 }
@@ -229,4 +233,21 @@ figcaption a {
     .split > * + * { /* Any element that has a sibling before it */
         margin-left: 2em;
     }
+}
+
+#opening-hours-container {
+    line-height: 1.75em;
+    width: 14em;
+    margin: 0 auto;
+    align-items: center;
+}
+
+#opening-hours-container > ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+#opening-hours-container > div {
+    text-align: center;
 }
