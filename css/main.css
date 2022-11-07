@@ -121,10 +121,34 @@ nav a:hover::before {
     background-color: rgb(var(--clr-neutral-2));
 }
 
-}
+/* || SITEWIDE */
+#skip-navigation {
+    position: absolute;
+    left: 6em;
+    top: -1000px;
+
+    font-size: 0.75em;
+    text-decoration: none;
+    color: rgb(var(--clr-neutral-2));
+    font-family: var(--ff-secondary);
+    text-transform: uppercase;
+    background-color: rgb(var(--clr-neutral-3));
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: 2px solid rgb(var(--clr-neutral-2));
+    transition: border 100ms ease-out;
+    z-index: 1;
 }
 
-/* || SITEWIDE */
+#skip-navigation:focus {
+    top: 1.5em;
+    outline: none;
+}
+
+#skip-navigation:hover {
+    border: 2px solid rgb(var(--clr-neutral-1));
+}
+
 .logo {
     height: 3em;
     width: auto;
