@@ -21,6 +21,11 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    background: none;
+}
+
 body {
     margin: 0;
     font-family: var(--ff-primary);
@@ -34,29 +39,46 @@ h1,
 h2,
 h3,
 h4 {
-    margin: 0 0.1em;
+    margin: 0.25em;
     color: rgb(var(--clr-primary-1));
     font-family: var(--ff-accent);
+    text-align: center;
+}
+
+hr {
+    width: 50vw;
+    margin: 1rem auto;
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, rgba(var(--clr-primary-1), 0), rgba(var(--clr-primary-1), 1), rgba(var(--clr-primary-1), 0));
 }
 
 header {
     background-color: rgb(var(--clr-primary-1));
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    padding: 0.5em;
+}
+
+nav {
+    margin-left: auto;
+}
+
+img {
+    display: block;
 }
 
 nav ul {
     display: flex;
     flex-wrap: wrap;
     gap: 0 1.5em;
-    padding: 0.5em 1em;
+    padding: 0 1em;
     list-style: none;
+    justify-content: flex-end;
 }
 
 nav a {
     position: relative;
-    text-decoration: none;
     color: rgb(var(--clr-neutral-2));
     font-family: var(--ff-secondary);
     text-transform: uppercase;
@@ -75,14 +97,31 @@ nav a::before {
         background-color 350ms ease;
 }
 
+figcaption {
+    text-align: center;
+    margin: 0.5em 1em;
+    font-size: 0.75rem;
+}
+
+figcaption, 
+figcaption a {
+    color: rgb(var(--clr-neutral-1));
+}
+
+figcaption a {
+    text-decoration: underline;
+}
+
+/* TODO: The active page in the nav bar is marked.
+    Use JS(?) to mark a link as active in the class */
+
 nav a:hover::before {
     width: 100%;
     left: 0;
     background-color: rgb(var(--clr-neutral-2));
 }
 
-main {
-    padding: 1em;
+}
 }
 
 /* || SITEWIDE */
