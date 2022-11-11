@@ -121,7 +121,22 @@ figcaption a {
     text-decoration: underline;
 }
 
+footer {
+    position: relative;
+    width: 100%;
+	height: 10em;
+    margin-top: 1em;
+    font-size: 0.75em;
+    color: rgb(var(--clr-neutral-2));
+	background-color: rgb(var(--clr-primary-1));
+}
 
+footer h3 {
+    color: rgb(var(--clr-primary-2));
+}
+
+footer > div > div {
+    display: inline-block;
 }
 
 /* || SITEWIDE */
@@ -206,7 +221,7 @@ figcaption a {
 }
 
 .img-medium {
-    width: max(50vw, 250px);
+    width: 25em;
     height: auto;
     margin: 0 auto;
 }
@@ -250,4 +265,28 @@ figcaption a {
 
 #opening-hours-container > div {
     text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    padding: 1em 5vw;
+    justify-content: space-between;
+}
+
+.footer-container > div:first-child {
+    margin-right: auto;
+}
+
+.footer-container > div:last-child {
+    margin-left: auto;
+}
+
+.social-media-icon {
+    display: inline-block;
+    margin: 0.1em;
+    fill: white;
+    height: 2em;
+    aspect-ratio: 1;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(139deg) brightness(103%) contrast(101%);
 }
