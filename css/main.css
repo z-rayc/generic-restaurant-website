@@ -265,6 +265,12 @@ footer > div > div {
     margin: 0 auto;
 }
 
+.img-large {
+    width: 35em;
+    height: auto;
+    margin: 0 auto;
+}
+
 /* Main */
 .container {
     padding: 0.5rem 2rem;
