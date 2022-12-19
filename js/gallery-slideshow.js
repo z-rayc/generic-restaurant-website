@@ -1,13 +1,14 @@
 $(function () {
     var imgWidth = $(".gallery-item").width(), imgIndex = 0, timer;
     
+    // Add balls equal to amount of images in gallery
     function insertBalls() {
         let imageCount = $('.slide-gallery .gallery-item').length;
+        console.log("Images: " + imageCount);
         $('.balls').html('<span class="ball active"></span>');
         
-        let ballDiv = $('<span class="ball"></span>');
         for (let i = 0; i < imageCount - 1; i++) {
-            $('.balls').append(ballDiv);
+            $('.balls').append('<span class="ball"></span>');
         }
     }
     insertBalls();
