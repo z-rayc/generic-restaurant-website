@@ -1,7 +1,18 @@
 $(function () {
     var imgWidth = $(".gallery-item").width(), imgIndex = 0, timer;
+    
+    function insertBalls() {
+        let imageCount = $('.slide-gallery .gallery-item').length;
+        $('.balls').html('<span class="ball active"></span>');
+        
+        let ballDiv = $('<span class="ball"></span>');
+        for (let i = 0; i < imageCount - 1; i++) {
+            $('.balls').append(ballDiv);
+        }
+    }
+    insertBalls();
 
-    // The "next"-button effect function
+    // The next button effect function
     $(".gallery-btn-next").on("click", function () {
         imgIndex++;
         $(".ball").eq(imgIndex).addClass("active").siblings().removeClass("active");
@@ -14,7 +25,7 @@ $(function () {
         });
     });
 
-    // The "previous"-button effect function
+    // The previos button effect function
     $(".gallery-btn-prev").on("click", function () {
         if (imgIndex <= 0) {
             imgIndex = $(".gallery-item").length;
@@ -35,9 +46,8 @@ $(function () {
     });
 
     // Auto run
-    // The interval time
-    const interval = 5000; 
-
+    const timeInterval = 4000;
+    
     function autoRun() {
         timer = setInterval(function () {
             imgIndex++;
@@ -49,11 +59,11 @@ $(function () {
             $(".gallery-images").css({
                 left: -imgWidth * imgIndex + "px"
             });
-        }, interval);
+        }, timeInterval);
     }
 
     autoRun();
-    $(".gallery-btn-next, .gallery-btn-prev").on({
+    $(".gallery-btn-next , .gallery-btn-prev").on({
         mouseenter: function () {
             clearInterval(timer);
         },
