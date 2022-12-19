@@ -1,14 +1,15 @@
 $(function () {
-    var imgWidth = $(".gallery-item").width(), imgIndex = 0, timer;
-    
+    let imgWidth = $(".gallery-item").width();
+    let imgIndex = 0;
+    let timer;
+
     // Add balls equal to amount of images in gallery
     function insertBalls() {
         let imageCount = $('.slide-gallery .gallery-item').length;
-        console.log("Images: " + imageCount);
-        $('.balls').html('<span class="ball active"></span>');
+        $('.balls').html('<span data-index="0" class="ball active"></span>');
         
-        for (let i = 0; i < imageCount - 1; i++) {
-            $('.balls').append('<span class="ball"></span>');
+        for (let i = 1; i < imageCount; i++) {
+            $('.balls').append('<span data-index="' + i + '" class="ball"></span>');
         }
     }
     insertBalls();
@@ -40,6 +41,9 @@ $(function () {
 
     // The balls functions
     $(".ball").on("click", function () {
+        imgIndex = $(this).data('index');
+        clearInterval(timer);
+        autoRun();
         $(this).addClass("active").siblings().removeClass("active");
         $(".gallery-images").css({
             left: -imgWidth * $(this).index() + "px"
@@ -64,7 +68,7 @@ $(function () {
     }
 
     autoRun();
-    $(".gallery-btn-next , .gallery-btn-prev").on({
+    $("figcaption, .gallery-btn-next , .gallery-btn-prev").on({
         mouseenter: function () {
             clearInterval(timer);
         },
