@@ -1,17 +1,23 @@
 /* || VARAIABLES */
 :root {
- /* Colours */
- --clr-neutral-1: 0, 0, 0; /* Black */
- --clr-neutral-2: 255, 255, 255; /* White */
- --clr-neutral-3: 50, 50, 50; /* Dark Grey */
- --clr-primary-1: 45, 15, 0; /* Dark Chocolate */
- --clr-primary-2: 240, 230, 215; /* Cream */
- --clr-secondary-1: 220, 50, 10; /* Hot Sauce */
+    /* Colours */
+    /* Black */
+    --clr-neutral-1: 0, 0, 0;
+    /* White */
+    --clr-neutral-2: 255, 255, 255;
+    /* Dark Grey */
+    --clr-neutral-3: 50, 50, 50;
+    /* Dark Chocolate */
+    --clr-primary-1: 45, 15, 0;
+    /* Cream */
+    --clr-primary-2: 240, 230, 215;
+    /* Hot Sauce */
+    --clr-secondary-1: 220, 50, 10;
 
- /* Fonts */
- --ff-primary: 'Roboto', 'Arial', sans-serif;
- --ff-secondary: 'Calibri', sans-serif;
- --ff-accent: 'Trirong', 'Avant Garde Medium', serif;
+    /* Fonts */
+    --ff-primary: 'Roboto', 'Arial', sans-serif;
+    --ff-secondary: 'Calibri', sans-serif;
+    --ff-accent: 'Trirong', 'Avant Garde Medium', serif;
 }
 
 /* || GENERAL STYLES */
@@ -149,7 +155,7 @@ figcaption {
     font-size: 0.75rem;
 }
 
-figcaption, 
+figcaption,
 figcaption a {
     color: rgba(var(--clr-neutral-1), 0.5);
 }
@@ -160,10 +166,10 @@ figcaption a {
 
 footer {
     border-top: 1px solid transparent;
-	min-height: 10em;
+    min-height: 10em;
     font-size: 0.75em;
     color: rgb(var(--clr-neutral-2));
-	background-color: rgb(var(--clr-primary-1));
+    background-color: rgb(var(--clr-primary-1));
 }
 
 footer a:hover {
@@ -174,11 +180,51 @@ footer h3 {
     color: rgb(var(--clr-primary-2));
 }
 
-footer > div > div {
+footer>div>div {
     display: inline-block;
 }
 
 /* || SITEWIDE */
+/* Main */
+.container {
+    padding: 0.5rem 2rem;
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 50em) {
+    .split {
+        flex-direction: row;
+    }
+
+    .split>* {
+        /* Every child of .split has equal width */
+        flex-basis: 100%;
+    }
+
+    .split>*+* {
+        /* Any element that has a sibling before it */
+        margin-left: 2em;
+    }
+}
+
+@media (min-width: 100em) {
+    .split {
+        flex-direction: row;
+    }
+
+    .split>.split--larger {
+        flex-basis: 70%;
+    }
+
+    .split>.split--smaller {
+        flex-basis: 30%;
+    }
+}
+
 /* Navigation */
 .highlight {
     color: rgb(var(--clr-secondary-1));
@@ -231,15 +277,15 @@ footer > div > div {
     background-position: 50% 25%;
 }
 
-.banner-text > hr {
+.banner-text>hr {
     background: linear-gradient(to right, rgba(var(--clr-primary-2), 0), rgba(var(--clr-primary-2), 1), rgba(var(--clr-primary-2), 0));
 }
 
-.banner-text > h1 {
+.banner-text>h1 {
     color: rgb(var(--clr-primary-2));
 }
 
-.banner-text > p {
+.banner-text>p {
     color: rgb(var(--clr-neutral-2));
     text-align: center;
 }
@@ -248,12 +294,12 @@ footer > div > div {
     background-blend-mode: darken;
 }
 
-.banner-container > figcaption,
-.banner-container > figcaption > a {
+.banner-container>figcaption,
+.banner-container>figcaption>a {
     color: rgba(var(--clr-neutral-2), 0.5);
 }
 
-.banner-container > figcaption {
+.banner-container>figcaption {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -265,50 +311,84 @@ footer > div > div {
     margin: 0 auto;
 }
 
-.img-large {
-    width: 35em;
-    height: auto;
-    margin: 0 auto;
+/* Image slide-gallery */
+.slide-gallery {
+    --gallery-img-width: 35rem;
+    --gallery-img-height: 22rem;
+
+    position: relative;
+    margin: 1em auto;
+    width: var(--gallery-img-width);
+    height: calc(var(--gallery-img-height) + 2em);
+    overflow: hidden;
 }
 
-/* Main */
-.container {
-    padding: 0.5rem 2rem;
+.slide-gallery img {
+    width: var(--gallery-img-width);
+    height: var(--gallery-img-height);
+    aspect-ratio: initial;
 }
 
-.split {
+.gallery-images {
+    position: absolute;
     display: flex;
-    flex-direction: column;
+    left: 0;
+    transition: 1.3s ease-in-out;
 }
 
-@media (min-width: 50em) {
-    .split {
-        flex-direction: row;
-    }
-
-    .split > * { /* Every child of .split has equal width */
-        flex-basis: 100%;
-    }
-
-    .split > * + * { /* Any element that has a sibling before it */
-        margin-left: 2em;
-    }
+.gallery-btn-prev,
+.gallery-btn-next {
+    position: absolute;
+    top: 0%;
+    min-width: 1em;
+    height: var(--gallery-img-height);
+    line-height: var(--gallery-img-height);
+    font-size: 1.5em;
+    padding: 0.5rem;
+    
+    background-color: rgba(var(--clr-neutral-1), 0.1);
+    color: rgba(var(--clr-neutral-2), 0.8);
+    cursor: pointer;
+    transition: .5s ease-in-out;
 }
 
-@media (min-width: 100em) {
-    .split {
-        flex-direction: row;
-    }
-
-    .split > .split--larger {
-        flex-basis: 70%;
-    }
-
-    .split > .split--smaller {
-        flex-basis: 30%;
-    }
+.gallery-btn-prev {
+    left: 0;
 }
 
+.gallery-btn-next {
+    right: 0;
+}
+
+.gallery-btn-prev:hover,
+.gallery-btn-next:hover {
+    background-color: rgba(var(--clr-neutral-1), 0.6);
+    color: rgb(var(--clr-neutral-2));
+}
+
+.balls {
+    position: absolute;
+    bottom: 2.5em;
+    left: 50%;
+    display: flex;
+    transform: translatex(-50%);
+}
+
+.balls .ball {
+    width: 0.75em;
+    aspect-ratio: 1 / 1;
+    border: 1px solid rgb(var(--clr-neutral-3));
+    border-radius: 50%;
+    margin: 0.5em;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.balls .active {
+    background-color: rgba(var(--clr-neutral-2), 0.4);
+}
+
+/* Opening Hours */
 #opening-hours-container {
     line-height: 1.75em;
     width: 14em;
@@ -316,15 +396,17 @@ footer > div > div {
     align-items: center;
 }
 
-#opening-hours-container > ul {
+#opening-hours-container>ul {
     list-style: none;
     text-align: center;
     padding: 0;
 }
 
-#opening-hours-container > div {
+#opening-hours-container>div {
     text-align: center;
 }
+
+/* Footer */
 
 .footer-container {
     display: flex;
@@ -333,15 +415,15 @@ footer > div > div {
     justify-content: space-between;
 }
 
-.footer-container > * {
+.footer-container>* {
     margin: 2em;
 }
 
-.footer-container > div:first-child {
+.footer-container>div:first-child {
     margin-right: auto;
 }
 
-.footer-container > div:last-child {
+.footer-container>div:last-child {
     margin-left: auto;
 }
 
