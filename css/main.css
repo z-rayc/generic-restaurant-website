@@ -314,7 +314,7 @@ footer>div>div {
 /* Image slide-gallery */
 .slide-gallery {
     --gallery-img-width: 35rem;
-    --gallery-img-height: 22rem;
+    --gallery-img-height: 23rem;
 
     position: relative;
     margin: 1em auto;
