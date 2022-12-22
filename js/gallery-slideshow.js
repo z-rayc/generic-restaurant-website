@@ -14,10 +14,13 @@ $(function () {
     }
     insertBalls();
 
-    console.log($(".slide-gallery .gallery-item").length)
-
     // The previos button effect function
     $(".gallery-btn-prev").on("click", function () {
+        goToPreviousImage();
+    });
+
+    // Go to previous image
+    function goToPreviousImage() {
         if (imgIndex <= 0) {
             imgIndex = $(".slide-gallery .gallery-item").length;
         }
@@ -26,10 +29,14 @@ $(function () {
             left: -imgWidth * imgIndex + "px"
         });
         $(".ball").eq(imgIndex).addClass("active").siblings().removeClass("active");
-    });
+    }
 
     // The next button effect function
     $(".gallery-btn-next").on("click", function () {
+        goToNextImage();
+    });
+
+    function goToNextImage() {
         imgIndex++;
         $(".ball").eq(imgIndex).addClass("active").siblings().removeClass("active");
         if (imgIndex >= $(".slide-gallery .gallery-item").length) {
@@ -39,7 +46,7 @@ $(function () {
         $(".gallery-images").css({
             left: -imgWidth * imgIndex + "px"
         });
-    });
+    }
 
     // The balls functions
     $(".ball").on("click", function () {
