@@ -331,8 +331,8 @@ footer>div>div {
 }
 
 .slide-gallery {
-    --gallery-img-width: 35rem;
-    --gallery-img-height: 23rem;
+    --gallery-img-width: 33rem;
+    --gallery-img-height: 21rem;
 
     position: relative;
     margin: 1em auto;
