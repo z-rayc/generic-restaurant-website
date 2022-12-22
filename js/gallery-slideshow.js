@@ -29,6 +29,9 @@ $(function () {
             left: -imgWidth * imgIndex + "px"
         });
         $(".ball").eq(imgIndex).addClass("active").siblings().removeClass("active");
+
+        clearInterval(timer);
+        autoRun();
     }
 
     // The next button effect function
@@ -46,6 +49,9 @@ $(function () {
         $(".gallery-images").css({
             left: -imgWidth * imgIndex + "px"
         });
+
+        clearInterval(timer);
+        autoRun();
     }
 
     // The balls functions
@@ -78,6 +84,7 @@ $(function () {
     }
     autoRun();
 
+    // Pause auto-play on gallery on focus/hover on caption
     $("figcaption a").on({
         focus: function () {
             clearInterval(timer);
@@ -90,6 +97,20 @@ $(function () {
         },
         mouseleave: function () {
             autoRun();
+        }
+    });
+
+    // Make pressing enter on "next" button same as clicking
+    $(".gallery-btn-next").keyup(function (event) {
+        if (event.keyCode === 13) {
+            $(".gallery-btn-next").click();
+        }
+    });
+
+    // Make pressing enter on "previous" button same as clicking
+    $(".gallery-btn-prev").keyup(function (event) {
+        if (event.keyCode === 13) {
+            $(".gallery-btn-prev").click();
         }
     });
 });
