@@ -13,7 +13,7 @@
 <body>
     <header>
         <a href="index.html"><img class="logo" src="images/icons/logo.png" alt="Restaurant logo"></a>
-        <a href="#introduction" id="skip-navigation">Skip navigation</a>
+        <a href="#introduction" id="skip-navigation" class="skip-btn">Skip navigation</a>
         <nav>
             <ul>
                 <li>
@@ -82,19 +82,31 @@
             <div class="container">
                 <h2>Gallery</h2>
                 <div class="slide-gallery">
+                    <!-- Buttons -->
+                    <span tabindex="0" class="gallery-btn-prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+                    <span tabindex="0" class="gallery-btn-next"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                    <a href="#reviews" id="skip-gallery" class="skip-btn">Skip image links</a>
+
                     <!-- Images -->
                     <div class="gallery-images">
-                        <div class="gallery-item">
-                            <img src="images/gallery/fried-kimchi-pork-tofu.jpg" alt="Fried Kimchi and pork served with warm tofu.">
-                            <figcaption>
-                                Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/9933979106/in/photostream/">Flickr</a>
-                            </figcaption>
-                        </div>
-
                         <div class="gallery-item">
                             <img src="images/gallery/tuna-kimchi-stew.jpg" alt="Tuna Kimchi Stew.">
                             <figcaption>
                                 Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/10165987846/in/photostream/">Flickr</a>
+                            </figcaption>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img src="images/gallery/marinated-beef.jpg" alt="Marinated, thin sliced beef with sweet soy sauce (Bulgogi).">
+                            <figcaption>
+                                Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/8634652350/in/photostream/">Flickr</a>
+                            </figcaption>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img src="images/gallery/fried-kimchi-pork-tofu.jpg" alt="Fried Kimchi and pork served with warm tofu.">
+                            <figcaption>
+                                Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/9933979106/in/photostream/">Flickr</a>
                             </figcaption>
                         </div>
 
@@ -113,9 +125,16 @@
                         </div>
 
                         <div class="gallery-item">
-                            <img src="images/gallery/marinated-beef.jpg" alt="Marinated, thin sliced beef with sweet soy sauce (Bulgogi).">
+                            <img src="images/gallery/spicy-pork.jpg" alt="Spicy Pork (Bulgogi).">
                             <figcaption>
-                                Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/8634652350/in/photostream/">Flickr</a>
+                                Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/10374957283/in/photostream/">Flickr</a>
+                            </figcaption>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img src="images/gallery/fried-dumplings.jpg" alt="Fried Dumplings.">
+                            <figcaption>
+                                Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/95331993@N06/">Jinho Kim</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/95331993@N06/41824219882/in/album-72157633362316549/">Flickr</a>
                             </figcaption>
                         </div>
 
@@ -125,12 +144,23 @@
                                 Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/7862312676/in/photostream/">Flickr</a>
                             </figcaption>
                         </div>
+
+                        <div class="gallery-item">
+                            <img src="images/gallery/matcha-hojicha-cake.jpg" alt="Matcha and Hojicha mousse layers, matcha sponge and black sesame brittle.">
+                            <figcaption>
+                                Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/8507797@N03/">Grace Chan</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/8507797@N03/40004581331/">Flickr</a>
+                            </figcaption>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img src="images/gallery/patbingsu.jpg" alt="Patbingsu (red beans shaved ice).">
+                            <figcaption>
+                                Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/estherbunnay/">Pictured Thoughts</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/estherbunnay/6971326243/">Flickr</a>
+                            </figcaption>
+                        </div>
                     </div>
                     
-                    <!-- Buttons -->
-                    <span class="gallery-btn-next"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
-                    <span class="gallery-btn-prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
-                    
+                    <!-- Balls -->
                     <div class="balls"></div>
                 </div>
             
@@ -139,7 +169,7 @@
         <hr>
         <section>
             <div class="container">
-                <h2>Reviews</h2>
+                <h2 id="reviews">Reviews</h2>
             </div>
         </section>
         <hr>
