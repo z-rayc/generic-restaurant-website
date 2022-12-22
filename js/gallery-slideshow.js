@@ -69,6 +69,12 @@ $(function () {
 
     autoRun();
     $("figcaption, .gallery-btn-next , .gallery-btn-prev").on({
+        focus: function () {
+            clearInterval(timer);
+        },
+        blur: function () {
+            autoRun();
+        },
         mouseenter: function () {
             clearInterval(timer);
         },
