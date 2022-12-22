@@ -15,9 +15,9 @@
     --clr-secondary-1: 220, 50, 10;
 
     /* Fonts */
-    --ff-primary: 'Roboto', 'Arial', sans-serif;
+    --ff-primary: 'Arial', 'Helvetica', sans-serif;
     --ff-secondary: 'Calibri', sans-serif;
-    --ff-accent: 'Trirong', 'Avant Garde Medium', serif;
+    --ff-accent: 'Trirong', 'Roboto Slab', serif;
 }
 
 /* || GENERAL STYLES */
@@ -167,7 +167,7 @@ figcaption a {
 footer {
     border-top: 1px solid transparent;
     min-height: 10em;
-    font-size: 0.75em;
+    font-size: 0.8em;
     color: rgb(var(--clr-neutral-2));
     background-color: rgb(var(--clr-primary-1));
 }
@@ -228,13 +228,11 @@ footer>div>div {
 /* Navigation */
 .highlight {
     color: rgb(var(--clr-secondary-1));
+    font-weight: 700;
 }
 
-#skip-navigation {
+.skip-btn {
     position: absolute;
-    left: 6em;
-    top: -1000px;
-
     font-size: 0.75em;
     text-decoration: none;
     color: rgb(var(--clr-neutral-2));
@@ -246,6 +244,11 @@ footer>div>div {
     border: 2px solid rgb(var(--clr-neutral-2));
     transition: border 100ms ease-out;
     z-index: 1;
+}
+
+#skip-navigation {
+    left: 6em;
+    top: -1000px;
 }
 
 #skip-navigation:focus {
@@ -312,6 +315,21 @@ footer>div>div {
 }
 
 /* Image slide-gallery */
+#skip-gallery {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -1000px;
+}
+
+#skip-gallery:focus {
+    top: 1.5em;
+    outline: none;
+}
+
+#skip-gallery:hover {
+    border: 2px solid rgb(var(--clr-neutral-1));
+}
+
 .slide-gallery {
     --gallery-img-width: 35rem;
     --gallery-img-height: 23rem;
@@ -326,14 +344,37 @@ footer>div>div {
 .slide-gallery img {
     width: var(--gallery-img-width);
     height: var(--gallery-img-height);
-    aspect-ratio: initial;
 }
 
 .gallery-images {
     position: absolute;
     display: flex;
     left: 0;
-    transition: 1s ease-in-out;
+    transition: 800ms ease-in-out;
+}
+
+.gallery-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--gallery-img-height);
+    width: var(--gallery-img-width);
+}
+
+.gallery-item img {
+    object-fit: cover;
+    max-height: var(--gallery-img-height);
+    max-width: var(--gallery-img-width);
+    
+}
+
+.gallery-item figcaption {
+    position: absolute;
+    top: var(--gallery-img-height);
+    left: 50%;
+    margin: 1em 0;
+    transform: translateX(-50%);
 }
 
 .gallery-btn-prev,
@@ -349,7 +390,8 @@ footer>div>div {
     background-color: rgba(var(--clr-neutral-1), 0.1);
     color: rgba(var(--clr-neutral-2), 0.8);
     cursor: pointer;
-    transition: .5s ease-in-out;
+    transition: 350ms ease-in-out;
+    z-index: 1;
 }
 
 .gallery-btn-prev {
@@ -361,17 +403,20 @@ footer>div>div {
 }
 
 .gallery-btn-prev:hover,
-.gallery-btn-next:hover {
+.gallery-btn-next:hover,
+.gallery-btn-prev:focus,
+.gallery-btn-next:focus {
     background-color: rgba(var(--clr-neutral-1), 0.6);
     color: rgb(var(--clr-neutral-2));
 }
 
 .balls {
     position: absolute;
+    display: flex;
     bottom: 2.5em;
     left: 50%;
-    display: flex;
     transform: translatex(-50%);
+    z-index: 1;
 }
 
 .balls .ball {
@@ -385,7 +430,7 @@ footer>div>div {
 }
 
 .balls .active {
-    background-color: rgba(var(--clr-neutral-2), 0.4);
+    background-color: rgba(var(--clr-neutral-2), 0.6);
 }
 
 /* Opening Hours */
@@ -407,7 +452,6 @@ footer>div>div {
 }
 
 /* Footer */
-
 .footer-container {
     display: flex;
     align-items: center;
@@ -427,11 +471,25 @@ footer>div>div {
     margin-left: auto;
 }
 
+.footer-text {
+    display: flex;
+    margin: 0.5em;
+}
+
+.footer-icon {
+    display: inline-block;
+    margin-right: 0.3em;
+    height: 1.5em;
+    aspect-ratio: 1 / 1;
+    fill: rgb(var(--clr-neutral-2));
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(139deg) brightness(103%) contrast(101%);
+}
+
 .social-media-icon {
     display: inline-block;
     margin: 0.1em;
-    fill: white;
     height: 2em;
     aspect-ratio: 1;
+    fill: rgb(var(--clr-neutral-2));
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(139deg) brightness(103%) contrast(101%);
 }
