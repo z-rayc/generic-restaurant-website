@@ -533,6 +533,12 @@ footer h3 {
     grid-area: five;
 }
 
+.signature {
+    font-family: var(--ff-secondary);
+    padding-top: 0.25rem;
+    border-top: 1px solid rgb(var(--clr-secondary-1));
+}
+
 /* Opening Hours */
 #opening-hours-container {
     line-height: 1.75em;
