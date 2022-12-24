@@ -37,6 +37,7 @@ html {
     font-weight: 400;
     line-height: 1.5;
     color: rgb(var(--clr-neutral-1));
+    box-sizing: border-box;
 }
 
 body {
@@ -50,8 +51,10 @@ body {
 h1,
 h2,
 h3,
-h4 {
-    margin: 0.25em;
+h4, 
+h5,
+h6 {
+    margin: 0.5rem;
     color: rgb(var(--clr-primary-1));
     font-family: var(--ff-accent);
     text-align: center;
@@ -59,7 +62,7 @@ h4 {
 
 hr {
     width: 20em;
-    margin: 1rem auto;
+    margin: 2rem auto;
     border: 0;
     height: 2px;
     background: white;
@@ -145,6 +148,10 @@ nav .active:hover::before {
     background-color: rgb(var(--clr-primary-1));
 }
 
+p {
+    margin: 0.5rem 1rem;
+}
+
 main {
     padding-bottom: 1em;
 }
@@ -167,7 +174,8 @@ figcaption a {
 footer {
     border-top: 1px solid transparent;
     min-height: 10em;
-    font-size: 0.8em;
+    font-size: 0.8rem;
+    margin-top: 1rem;
     color: rgb(var(--clr-neutral-2));
     background-color: rgb(var(--clr-primary-1));
 }
@@ -180,19 +188,12 @@ footer h3 {
     color: rgb(var(--clr-primary-2));
 }
 
-footer>div>div {
-    display: inline-block;
-}
-
 /* || SITEWIDE */
 /* Main */
-.container {
-    padding: 0.5rem 2rem;
-}
-
 .split {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
 @media (min-width: 50em) {
@@ -203,11 +204,6 @@ footer>div>div {
     .split>* {
         /* Every child of .split has equal width */
         flex-basis: 100%;
-    }
-
-    .split>*+* {
-        /* Any element that has a sibling before it */
-        margin-left: 2em;
     }
 }
 
@@ -233,7 +229,7 @@ footer>div>div {
 
 .skip-btn {
     position: absolute;
-    font-size: 0.75em;
+    font-size: 0.75rem;
     text-decoration: none;
     color: rgb(var(--clr-neutral-2));
     font-family: var(--ff-secondary);
@@ -247,12 +243,12 @@ footer>div>div {
 }
 
 #skip-navigation {
-    left: 6em;
+    left: 6rem;
     top: -1000px;
 }
 
 #skip-navigation:focus {
-    top: 1.5em;
+    top: 1.5rem;
     outline: none;
 }
 
@@ -261,7 +257,7 @@ footer>div>div {
 }
 
 .logo {
-    height: 3em;
+    height: 3rem;
     width: auto;
     border-radius: 50%;
 }
@@ -270,6 +266,7 @@ footer>div>div {
 .banner-container {
     width: 100%;
     height: 20rem;
+    margin-bottom: 1rem;
     position: relative;
     display: flex;
     justify-content: center;
@@ -309,9 +306,15 @@ footer>div>div {
 }
 
 .img-medium {
-    width: 25em;
+    width: 80vw;
     height: auto;
     margin: 0 auto;
+}
+
+@media (min-width: 400px) {
+    .img-medium {
+        width: 30rem;
+    }
 }
 
 /* Image slide-gallery */
@@ -331,14 +334,31 @@ footer>div>div {
 }
 
 .slide-gallery {
-    --gallery-img-width: 33rem;
-    --gallery-img-height: 21rem;
+    --gallery-img-width: 100vw;
+    --gallery-img-height: 70vw;
 
     position: relative;
-    margin: 1em auto;
+    margin: 1rem 0;
     width: var(--gallery-img-width);
     height: calc(var(--gallery-img-height) + 2em);
     overflow: hidden;
+}
+
+@media (min-width: 400px) {
+    /* TODO: Make desktop version */
+    .slide-gallery {
+        --gallery-img-width: 33rem;
+        --gallery-img-height: 21rem;
+
+        margin: 1rem auto;
+        width: var(--gallery-img-width);
+        height: calc(var(--gallery-img-height) + 2em);
+    }
+
+    .slide-gallery img {
+        width: var(--gallery-img-width);
+        height: var(--gallery-img-height);
+    }
 }
 
 .slide-gallery img {
@@ -384,7 +404,7 @@ footer>div>div {
     min-width: 1em;
     height: var(--gallery-img-height);
     line-height: var(--gallery-img-height);
-    font-size: 1.5em;
+    font-size: 1.5rem;
     padding: 0.5rem;
     
     background-color: rgba(var(--clr-neutral-1), 0.1);
@@ -402,10 +422,8 @@ footer>div>div {
     right: 0;
 }
 
-.gallery-btn-prev:hover,
-.gallery-btn-next:hover,
-.gallery-btn-prev:focus,
-.gallery-btn-next:focus {
+.gallery-btn-prev:is(:hover, :focus),
+.gallery-btn-next:is(:hover, :focus) {
     background-color: rgba(var(--clr-neutral-1), 0.6);
     color: rgb(var(--clr-neutral-2));
 }
@@ -433,6 +451,88 @@ footer>div>div {
     background-color: rgba(var(--clr-neutral-2), 0.6);
 }
 
+/* Reviews */
+.bg-dark-neutral {
+    background-color: rgb(var(--clr-neutral-3));
+    color: rgb(var(--clr-neutral-2));
+}
+
+.bg-light-neutral {
+    background: rgb(var(--clr-neutral-2));
+    color: rgb(var(--clr-neutral-1));
+}
+
+.bg-dark-colorful {
+    background: rgb(var(--clr-primary-1));
+    color: rgb(var(--clr-neutral-2));
+}
+
+.bg-dark-neutral h3,
+.bg-dark-colorful h3,
+.bg-light-neutral h3 {
+    color: inherit;
+}
+
+.reviews-container h3 {
+    font-family: var(--ff-primary);
+}
+
+.reviews-container {
+    display: grid;
+    width: 80vw;
+    gap: 1rem;
+    grid-template-areas: 
+        'one'
+        'two'
+        'three'
+        'four'
+        'five';
+    margin: 1rem auto;
+}
+
+@media (min-width: 400px) {
+    .reviews-container {
+        grid-template-areas: 
+            'one one'
+            'five two'
+            'five three'
+            'four four';
+    }
+}
+
+@media (min-width: 900px) {
+    .reviews-container {
+        grid-template-areas: 
+            'one one two five'
+            'three four four five';
+    }
+}
+
+.review {
+    padding: 1em;
+    border: 1px solid rgb(var(--clr-secondary-1));
+}
+
+.review:nth-child(1) {
+    grid-area: one;
+}
+
+.review:nth-child(2) {
+    grid-area: two;
+}
+
+.review:nth-child(3) {
+    grid-area: three;
+}
+
+.review:nth-child(4) {
+    grid-area: four;
+}
+
+.review:nth-child(5) {
+    grid-area: five;
+}
+
 /* Opening Hours */
 #opening-hours-container {
     line-height: 1.75em;
@@ -454,29 +554,36 @@ footer>div>div {
 /* Footer */
 .footer-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 1em 5vw;
+    padding: 1em 3em;
     justify-content: space-between;
 }
 
-.footer-container>* {
-    margin: 2em;
+@media (min-width: 400px) {
+    .footer-container {
+        flex-direction: row;
+    }
 }
 
-.footer-container>div:first-child {
+.footer-container>* {
+    margin: 1em;
+}
+
+/* .footer-container>div:first-child {
     margin-right: auto;
 }
 
 .footer-container>div:last-child {
     margin-left: auto;
-}
+} */
 
 .footer-text {
     display: flex;
     margin: 0.5em;
 }
 
-.footer-icon {
+.find-us-icon {
     display: inline-block;
     margin-right: 0.3em;
     height: 1.5em;
