@@ -584,7 +584,7 @@ footer h3 {
     margin-left: auto;
 } */
 
-.footer-text {
+.find-us-text {
     display: flex;
     margin: 0.5em;
 }
@@ -598,11 +598,16 @@ footer h3 {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(139deg) brightness(103%) contrast(101%);
 }
 
-.social-media-icon {
+.social-media-link {
     display: inline-block;
     margin: 0.1em;
     height: 2em;
     aspect-ratio: 1;
+}
+
+.social-media-icon {
+    height: inherit;
+    width: inherit;
     fill: rgb(var(--clr-neutral-2));
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(139deg) brightness(103%) contrast(101%);
+    filter: invert(100%) saturate(0%);
 }
