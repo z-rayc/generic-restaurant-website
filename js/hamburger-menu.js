@@ -1,7 +1,7 @@
 $(function () {
     // Toggle open and close nav styles on click
     $('#nav-toggle').click(function () {
-        $('nav ul').slideToggle();
+        $('.nav-list').slideToggle();
     });
 
     // Hamburger to X toggle
