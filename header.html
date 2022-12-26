@@ -13,7 +13,7 @@
         </div>
         <ul class="nav-list">
             <li>
-                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link" href="index.html">Home</a>
             </li>
             <li>
                 <a class="nav-link" href="#">Menu</a>
@@ -26,3 +26,12 @@
 </section>
 
 <script defer src="js/hamburger-menu.js"></script>
+
+<script>
+    /* Add the 'active' class to links with the current page */
+    $(function () {    
+        $('.nav-link').filter(function () {
+            return this.href === location.href;
+        }).addClass('active');
+    });
+</script>
