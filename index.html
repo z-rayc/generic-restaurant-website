@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,44 +8,54 @@
     <title>Restaurant</title>
     <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Trirong">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <header>
-        <a href="index.html"><img class="logo" src="images/icons/logo.png" alt="Restaurant logo"></a>
-        <a href="#introduction" id="skip-navigation" class="skip-btn">Skip navigation</a>
-        <nav>
-            <ul>
-                <li>
-                    <a class="active" href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="#">Menu</a>
-                </li>
-                <li>
-                    <a class="highlight" href="#">Reservation</a>
-                </li>
-                <li>
-                    <a href="#">News</a>
-                </li>
-                <li>
-                    <a href="#">Contact us</a>
-                </li>
-            </ul>
-        </nav>
+        <section class="nav-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo-link">
+                    <img class="logo-img" src="images/icons/logo.png" alt="...">
+                </a>
+            </div>
+            <a href="#introduction" id="skip-navigation" class="skip-btn">Skip navigation</a>
+            <nav>
+                <div class="nav-mobile">
+                    <a id="nav-toggle" href="#!">
+                        <span></span>
+                    </a>
+                </div>
+                <ul class="nav-list">
+                    <li>
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">Menu</a>
+                    </li>
+                    <li><a class="nav-link highlight" href="#">Reservation</a></li>
+                    <li><a class="nav-link" href="#">News</a></li>
+                    <li><a class="nav-link" href="#">Contact us</a></li>
+                </ul>
+            </nav>
+        </section>
     </header>
     <main>
         <section>
             <div class="banner-container img-overlay">
-                    <div class="banner-text">
-                        <h1 id="introduction">Welcome to Restaurant</h1>
-                        <hr>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia voluptates tenetur nisi eaque maxime tempore, enim ipsum fugiat molestiae quis non commodi beatae autem necessitatibus quod animi.</p>
-                    </div>
+                <div class="banner-text">
+                    <h1 id="introduction">Welcome to Restaurant</h1>
+                    <hr>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia voluptates tenetur nisi eaque
+                        maxime tempore, enim ipsum fugiat molestiae quis non commodi beatae autem necessitatibus quod
+                        animi.</p>
+                </div>
                 <figcaption>
-                    Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/90922774@N00">shindz</a>
-                    from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/90922774@N00/872371771">Flickr</a>
+                    Image by <a target="_blank" rel="noopener noreferrer"
+                        href="https://www.flickr.com/photos/90922774@N00">shindz</a>
+                    from <a target="_blank" rel="noopener noreferrer"
+                        href="https://www.flickr.com/photos/90922774@N00/872371771">Flickr</a>
                 </figcaption>
             </div>
         </section>
@@ -54,23 +65,26 @@
                 <div class="split">
                     <div class="split--larger">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Temporibus ratione culpa est at laborum quisquam beatae
-                        numquam vitae, ad quasi itaque esse tempore eligendi nostrum
-                        quod animi sequi repellendus fugiat saepe dignissimos
-                        consectetur earum. Assumenda repellendus nihil quos ducimus
-                        ipsum facere, nobis tempore maiores aut, illum laborum dicta
-                        quod aspernatur? Qui, veniam? Consequatur, debitis?
-                        Voluptatem, repellendus dolores. Soluta, vel animi. Ut
-                        sapiente alias mollitia assumenda ex quia repudiandae eaque,
-                        culpa, similique necessitatibus enim amet officiis animi,
-                        dolores minus at accusamus asperiores officia qui id non 
-                        explicabo consectetur provident. Ratione eum quam ad nihil 
-                        quo voluptatem corrupti cupiditate dolorum placeat cumque.</p>
+                            Temporibus ratione culpa est at laborum quisquam beatae
+                            numquam vitae, ad quasi itaque esse tempore eligendi nostrum
+                            quod animi sequi repellendus fugiat saepe dignissimos
+                            consectetur earum. Assumenda repellendus nihil quos ducimus
+                            ipsum facere, nobis tempore maiores aut, illum laborum dicta
+                            quod aspernatur? Qui, veniam? Consequatur, debitis?
+                            Voluptatem, repellendus dolores. Soluta, vel animi. Ut
+                            sapiente alias mollitia assumenda ex quia repudiandae eaque,
+                            culpa, similique necessitatibus enim amet officiis animi,
+                            dolores minus at accusamus asperiores officia qui id non
+                            explicabo consectetur provident. Ratione eum quam ad nihil
+                            quo voluptatem corrupti cupiditate dolorum placeat cumque.</p>
                     </div>
                     <div class="split--smaller">
                         <img class="img-medium" src="images/yakitori-chef.jpg" alt="Smiling Yakitori chef">
                         <figcaption>
-                            Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/sfj/">iMorpheus</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/sfj/2467590500/in/photostream/">Flickr</a>
+                            Image by <a target="_blank" rel="noopener noreferrer"
+                                href="https://www.flickr.com/photos/sfj/">iMorpheus</a> from <a target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://www.flickr.com/photos/sfj/2467590500/in/photostream/">Flickr</a>
                         </figcaption>
                     </div>
                 </div>
@@ -82,8 +96,10 @@
                 <h2>Gallery</h2>
                 <div class="slide-gallery">
                     <!-- Buttons -->
-                    <span tabindex="0" class="gallery-btn-prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
-                    <span tabindex="0" class="gallery-btn-next"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                    <span tabindex="0" class="gallery-btn-prev"><i class="fa fa-chevron-left"
+                            aria-hidden="true"></i></span>
+                    <span tabindex="0" class="gallery-btn-next"><i class="fa fa-chevron-right"
+                            aria-hidden="true"></i></span>
                     <a href="#reviews" id="skip-gallery" class="skip-btn">Skip image links</a>
 
                     <!-- Images -->
@@ -91,78 +107,113 @@
                         <div class="gallery-item">
                             <img src="images/gallery/tuna-kimchi-stew.jpg" alt="Tuna Kimchi Stew.">
                             <figcaption>
-                                Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/10165987846/in/photostream/">Flickr</a>
+                                Image by <a target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a
+                                    target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/kfoodaddict/10165987846/in/photostream/">Flickr</a>
                             </figcaption>
                         </div>
 
                         <div class="gallery-item">
-                            <img src="images/gallery/marinated-beef.jpg" alt="Marinated, thin sliced beef with sweet soy sauce (Bulgogi).">
+                            <img src="images/gallery/marinated-beef.jpg"
+                                alt="Marinated, thin sliced beef with sweet soy sauce (Bulgogi).">
                             <figcaption>
-                                Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/8634652350/in/photostream/">Flickr</a>
+                                Image by <a target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a
+                                    target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/kfoodaddict/8634652350/in/photostream/">Flickr</a>
                             </figcaption>
                         </div>
 
                         <div class="gallery-item">
-                            <img src="images/gallery/fried-kimchi-pork-tofu.jpg" alt="Fried Kimchi and pork served with warm tofu.">
+                            <img src="images/gallery/fried-kimchi-pork-tofu.jpg"
+                                alt="Fried Kimchi and pork served with warm tofu.">
                             <figcaption>
-                                Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/9933979106/in/photostream/">Flickr</a>
+                                Image by <a target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a
+                                    target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/kfoodaddict/9933979106/in/photostream/">Flickr</a>
                             </figcaption>
                         </div>
 
                         <div class="gallery-item">
                             <img src="images/gallery/spicy-rice-cake-skewers.jpg" alt="Spicy Rice Cake on skewers.">
                             <figcaption>
-                                Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/9656164568/in/photostream/">Flickr</a>
+                                Image by <a target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a
+                                    target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/kfoodaddict/9656164568/in/photostream/">Flickr</a>
                             </figcaption>
                         </div>
 
                         <div class="gallery-item">
-                            <img src="images/gallery/spicy-noodle-fried-dumpling.jpg" alt="Spicy Noodles with fried Dumplings.">
+                            <img src="images/gallery/spicy-noodle-fried-dumpling.jpg"
+                                alt="Spicy Noodles with fried Dumplings.">
                             <figcaption>
-                                Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/9517663605/in/photostream/">Flickr</a>
+                                Image by <a target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a
+                                    target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/kfoodaddict/9517663605/in/photostream/">Flickr</a>
                             </figcaption>
                         </div>
 
                         <div class="gallery-item">
                             <img src="images/gallery/spicy-pork.jpg" alt="Spicy Pork (Bulgogi).">
                             <figcaption>
-                                Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/10374957283/in/photostream/">Flickr</a>
+                                Image by <a target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a
+                                    target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/kfoodaddict/10374957283/in/photostream/">Flickr</a>
                             </figcaption>
                         </div>
 
                         <div class="gallery-item">
                             <img src="images/gallery/fried-dumplings.jpg" alt="Fried Dumplings.">
                             <figcaption>
-                                Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/95331993@N06/">Jinho Kim</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/95331993@N06/41824219882/in/album-72157633362316549/">Flickr</a>
+                                Image by <a target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/95331993@N06/">Jinho Kim</a> from <a
+                                    target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/95331993@N06/41824219882/in/album-72157633362316549/">Flickr</a>
                             </figcaption>
                         </div>
 
                         <div class="gallery-item">
-                            <img src="images/gallery/bibimbap.jpg" alt="Bibimbap (cookied rice with vegetables and meat, topped with kimchi).">
+                            <img src="images/gallery/bibimbap.jpg"
+                                alt="Bibimbap (cookied rice with vegetables and meat, topped with kimchi).">
                             <figcaption>
-                                Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/kfoodaddict/7862312676/in/photostream/">Flickr</a>
+                                Image by <a target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/kfoodaddict/">Chloe Lim</a> from <a
+                                    target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/kfoodaddict/7862312676/in/photostream/">Flickr</a>
                             </figcaption>
                         </div>
 
                         <div class="gallery-item">
-                            <img src="images/gallery/matcha-hojicha-cake.jpg" alt="Matcha and Hojicha mousse layers, matcha sponge and black sesame brittle.">
+                            <img src="images/gallery/matcha-hojicha-cake.jpg"
+                                alt="Matcha and Hojicha mousse layers, matcha sponge and black sesame brittle.">
                             <figcaption>
-                                Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/8507797@N03/">Grace Chan</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/8507797@N03/40004581331/">Flickr</a>
+                                Image by <a target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/8507797@N03/">Grace Chan</a> from <a
+                                    target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/8507797@N03/40004581331/">Flickr</a>
                             </figcaption>
                         </div>
 
                         <div class="gallery-item">
                             <img src="images/gallery/patbingsu.jpg" alt="Patbingsu (red beans shaved ice).">
                             <figcaption>
-                                Image by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/estherbunnay/">Pictured Thoughts</a> from <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/estherbunnay/6971326243/">Flickr</a>
+                                Image by <a target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/estherbunnay/">Pictured Thoughts</a> from <a
+                                    target="_blank" rel="noopener noreferrer"
+                                    href="https://www.flickr.com/photos/estherbunnay/6971326243/">Flickr</a>
                             </figcaption>
                         </div>
                     </div>
-                    
+
                     <!-- Balls -->
                     <div class="balls"></div>
                 </div>
-            
+
             </div>
         </section>
         <hr>
@@ -172,36 +223,36 @@
                 <div class="reviews-container">
                     <div class="bg-dark-neutral review">
                         <h3>An overall wonderful experience</h3>
-                        <p>The food was delicious, the atmosphere was cozy, and the 
-                            staff were very nice. I particularily enjoyed the Kimchi Stew! 
+                        <p>The food was delicious, the atmosphere was cozy, and the
+                            staff were very nice. I particularily enjoyed the Kimchi Stew!
                             We will absolutely be eating here the next time we're in town. </p>
                         <p class="signature">— John Doe</p>
                     </div>
                     <div class="bg-light-neutral review">
                         <h3>Lorem ipsum dolor sit amet consectetur</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                             Nisi debitis suscipit mollitia?</p>
                         <p class="signature">— In Venenatis</p>
                     </div>
                     <div class="bg-dark-colorful review">
                         <h3>Lorem ipsum dolor</h3>
-                        <p>Donec condimentum tellus in urna vestibulum, 
+                        <p>Donec condimentum tellus in urna vestibulum,
                             vel ornare tortor consectetur. Vestibulum vitae magna.</p>
                         <p class="signature">— Eu Sapien</p>
                     </div>
                     <div class="bg-light-neutral review">
                         <h3>Orci varius natoque</h3>
-                        <p>Penatibus et magnis dis parturient montes, nascetur 
-                            ridiculus mus. Morbi pharetra tempus dui non rhoncus. 
+                        <p>Penatibus et magnis dis parturient montes, nascetur
+                            ridiculus mus. Morbi pharetra tempus dui non rhoncus.
                             Morbi tempor consectetur lectus, ac condimentum risus ut. </p>
                         <p class="signature">— Hendrerit Nulla</p>
                     </div>
                     <div class="bg-dark-neutral review">
                         <h3>Duis non rutrum nulla</h3>
-                        <p>Mollis rutrum ipsum. Proin condimentum eget neque eu 
-                            faucibus. Morbi a libero sed sapien accumsan fermentum 
-                            vel sed diam. Integer id orci semper, eugiat tortor. Sed 
-                            tempor elementum mi, iaculis fermentum ipsum ultrices et. 
+                        <p>Mollis rutrum ipsum. Proin condimentum eget neque eu
+                            faucibus. Morbi a libero sed sapien accumsan fermentum
+                            vel sed diam. Integer id orci semper, eugiat tortor. Sed
+                            tempor elementum mi, iaculis fermentum ipsum ultrices et.
                             Pellentesque lacinia turpis lorem, id tempor ligula. </p>
                         <p class="signature">— Curabitur Et</p>
                     </div>
@@ -256,5 +307,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script defer src="js/gallery-slideshow.js"></script>
+    <script defer src="js/hamburger-menu.js"></script>
 </body>
+
 </html>
