@@ -1,0 +1,53 @@
+/* Reservation Main */
+form {
+    width: max(30rem, 60vw);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+form>hr {
+    background: rgb(var(--clr-neutral-2));
+}
+
+.form-item {
+    margin: 1rem auto;
+}
+
+label {
+    margin: 0;
+    display: block;
+    font-size: 1.2rem;
+    font-family: var(--ff-secondary);
+}
+
+input,
+select,
+textarea {
+    border-radius: 2px;
+    border: 2px solid rgb(var(--clr-neutral-3));
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 0.5em;
+    font-family: var(--ff-secondary);
+}
+
+textarea {
+    height: 10em;
+    resize: none;
+}
+
+button {
+    background: rgb(var(--clr-primary-1));
+    color: rgb(var(--clr-neutral-2));
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    transition: 200ms linear;
+}
+
+button:is(:hover, :focus) {
+    background: rgb(var(--clr-secondary-1));
+}
