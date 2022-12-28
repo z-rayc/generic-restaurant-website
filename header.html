@@ -4,23 +4,25 @@
             <img class="logo-img" src="images/icons/logo.png" alt="...">
         </a>
     </div>
-    <a href="#introduction" id="skip-navigation" class="skip-btn">Skip navigation</a>
+    <a href="#introduction" id="skip-navigation" class="skip-link">Skip navigation</a>
+    
     <nav>
         <div class="nav-mobile">
-            <a id="nav-toggle" href="#!">
-                <span></span>
-            </a>
+            <button id="nav-toggle" aria-label="Menu" 
+            aria-controls="primary-navigation">
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
         </div>
-        <ul class="nav-list">
+        <ul class="nav-list" id="primary-navigation">
             <li>
                 <a class="nav-link" href="index.html">Home</a>
             </li>
             <li>
                 <a class="nav-link" href="menu.html">Menu</a>
             </li>
-            <li><a class="nav-link highlight" href="#">Reservation</a></li>
-            <li><a class="nav-link" href="#">News</a></li>
-            <li><a class="nav-link" href="#">Contact us</a></li>
+            <li><a class="nav-link highlight" href="reservation.html">Reservation</a></li>
+            <li><a class="nav-link" href="news.html">News</a></li>
+            <li><a class="nav-link" href="contact us.html">Contact us</a></li>
         </ul>
     </nav>
 </section>
@@ -28,8 +30,8 @@
 <script defer src="js/hamburger-menu.js"></script>
 
 <script>
-    /* Add the 'active' class to links with the current page */
-    $(function () {    
+    $(function () {
+        // Add the 'active' class to links with the current page
         $('.nav-link').filter(function () {
             return this.href === location.href;
         }).addClass('active');
