@@ -100,13 +100,6 @@ $(function () {
         }
     });
 
-    // Make pressing enter on "next" button same as clicking
-    $(".gallery-btn-next").keyup(function (event) {
-        if (event.keyCode === 13) {
-            $(".gallery-btn-next").click();
-        }
-    });
-
     // Make pressing enter on "previous" button same as clicking
     $(".gallery-btn-prev").keyup(function (event) {
         if (event.keyCode === 13) {
