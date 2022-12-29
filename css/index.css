@@ -73,8 +73,8 @@
 }
 
 .slide-gallery {
-    --gallery-img-width: 95vw;
-    --gallery-img-height: 65vw;
+    --gallery-img-width: 350px;
+    --gallery-img-height: 250px;
 
     position: relative;
     margin: 1rem auto;
