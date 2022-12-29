@@ -3,13 +3,13 @@ $(function () {
     let imgIndex = 0;
     let timer;
 
-    // Add balls equal to amount of images in gallery
+    // Add dots equal to amount of images in gallery
     function insertBalls() {
         let imageCount = $('.slide-gallery .gallery-item').length;
-        $('.balls').html('<span data-index="0" class="ball active"></span>');
+        $('.dots').html('<span data-index="0" class="dot active"></span>');
         
         for (let i = 1; i < imageCount; i++) {
-            $('.balls').append('<span data-index="' + i + '" class="ball"></span>');
+            $('.dots').append('<span data-index="' + i + '" class="dot"></span>');
         }
     }
     insertBalls();
@@ -28,7 +28,7 @@ $(function () {
         $(".gallery-images").css({
             left: -imgWidth * imgIndex + "px"
         });
-        $(".ball").eq(imgIndex).addClass("active").siblings().removeClass("active");
+        $(".dot").eq(imgIndex).addClass("active").siblings().removeClass("active");
 
         clearInterval(timer);
         autoRun();
@@ -41,10 +41,10 @@ $(function () {
 
     function goToNextImage() {
         imgIndex++;
-        $(".ball").eq(imgIndex).addClass("active").siblings().removeClass("active");
+        $(".dot").eq(imgIndex).addClass("active").siblings().removeClass("active");
         if (imgIndex >= $(".slide-gallery .gallery-item").length) {
             imgIndex = 0;
-            $(".ball").eq(imgIndex).addClass("active").siblings().removeClass("active");
+            $(".dot").eq(imgIndex).addClass("active").siblings().removeClass("active");
         }
         $(".gallery-images").css({
             left: -imgWidth * imgIndex + "px"
@@ -54,8 +54,8 @@ $(function () {
         autoRun();
     }
 
-    // The balls functions
-    $(".ball").on("click", function () {
+    // The dots functions
+    $(".dot").on("click", function () {
         imgIndex = $(this).data('index');
         clearInterval(timer);
         autoRun();
@@ -72,10 +72,10 @@ $(function () {
     function autoRun() {
         timer = setInterval(function () {
             imgIndex++;
-            $(".ball").eq(imgIndex).addClass("active").siblings().removeClass("active");
+            $(".dot").eq(imgIndex).addClass("active").siblings().removeClass("active");
             if (imgIndex >= $(".slide-gallery .gallery-item").length) {
                 imgIndex = 0;
-                $(".ball").eq(imgIndex).addClass("active").siblings().removeClass("active");
+                $(".dot").eq(imgIndex).addClass("active").siblings().removeClass("active");
             }
             $(".gallery-images").css({
                 left: -imgWidth * imgIndex + "px"
