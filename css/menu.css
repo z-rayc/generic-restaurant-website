@@ -44,6 +44,7 @@
 }
 
 .menu-item {
+    position: relative;
     width: var(--menu-item-width);
     min-height: var(--menu-item-height);
     margin: 1rem;
@@ -51,7 +52,16 @@
     background: rgb(var(--clr-primary-1));
     color: rgb(var(--clr-neutral-2));
     box-sizing: content-box;
-    border-radius: 1rem;
+    border-radius: 1rem;  
+}
+
+.price {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-family: var(--ff-secondary);
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .menu-item :is(h1, h2, h3, h4) {
