@@ -1,4 +1,9 @@
 $(function() {
-    $("header").load("./header.html");
-    $("footer").load("./footer.html");
+    $('header').load('./header.html', function() {
+        $(this).children(':first').unwrap();
+    });
+
+    $('footer').load('./footer.html', function() {
+        $(this).children(':first').unwrap();
+    });
 });
