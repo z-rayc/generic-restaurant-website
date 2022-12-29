@@ -12,9 +12,9 @@ var message = document.querySelector("#message");
 
 form.onsubmit = function(e) {
     e.preventDefault();
-    // alert("Table reservation has been sent. You will get an e-mail once the reservation has been confirmed.")
-    
-    getDateTime();
+    alert("Table reservation has been sent. You will get an e-mail once the reservation has been confirmed.")
+
+    printInfo();
 }
 
 function printInfo() {
@@ -23,9 +23,7 @@ function printInfo() {
         + `E-mail: ${email.value}, \n`
         + `Phone: ${phone.value}, \n`
         + `Persons: ${persons.value}, \n`
-        + `Date and Time: ${dateTime.value}`;
-
-        // TODO: Correct date and time format
+        + `Date and Time: ${getDateTimeString(dateTime.value)}`;
 
         if (message.value.trim()) {
             info += `, \nMessage: ${message.value}`;
@@ -34,8 +32,10 @@ function printInfo() {
     console.log(info);
 }
 
-function getDateTime() {
-    let newDate = new Date(dateTime.value);
-    console.log(newDate.toTimeString());
-    return newDate;
+function getDateTimeString(date) {
+    let newDate = new Date(date);
+    let dateString = newDate.getDate() + "." + (newDate.getMonth()+1)
+        + "." + newDate.getFullYear() + ", "
+        + newDate.getHours() + ":" + newDate.getMinutes();
+    return dateString;
 }
