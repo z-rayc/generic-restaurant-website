@@ -89,8 +89,9 @@ header {
 }
 
 nav {
-    margin-right: calc(var(--nav-height) / 2);
+    background-color: rgb(var(--clr-primary-1));
     float: right;
+    padding-right: calc(var(--nav-height) / 2);
 }
 
 img {
