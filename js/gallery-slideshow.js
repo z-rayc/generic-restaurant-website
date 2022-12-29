@@ -99,11 +99,4 @@ $(function () {
             autoRun();
         }
     });
-
-    // Make pressing enter on "previous" button same as clicking
-    $(".gallery-btn-prev").keyup(function (event) {
-        if (event.keyCode === 13) {
-            $(".gallery-btn-prev").click();
-        }
-    });
 });
