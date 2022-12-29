@@ -197,6 +197,7 @@ footer h3 {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: block;
 }
 
 .nav-list li {
@@ -220,37 +221,31 @@ footer h3 {
     outline: none;
 }
 
-@media screen and (min-width: 600px) {
-    .nav-list {
-        display: block !important;
-    }
+.nav-link::before {
+    content: '';
+    position: absolute;
+    background-color: rgb(var(--clr-neutral-2));
+    width: 0;
+    height: 0.1em;
+    top: calc(50% + 1rem);
+    left: 50%;
+    transition:
+        width 350ms ease,
+        left 350ms ease,
+        background-color 350ms ease;
+}
 
-    .nav-link::before {
-        content: '';
-        position: absolute;
-        background-color: rgb(var(--clr-neutral-2));
-        width: 0;
-        height: 0.1em;
-        top: calc(50% + 1rem);
-        left: 50%;
-        transition:
-            width 350ms ease,
-            left 350ms ease,
-            background-color 350ms ease;
-    }
-    
-    .nav-link.active::before {
-        width: 100%;
-        left: 0;
-        background-color: rgb(var(--clr-neutral-2));
-    }
-    
-    .nav-link:is(:hover, :focus)::before {
-        width: 100%;
-        left: 0;
-        height: 0.2em;
-        background-color: rgb(var(--clr-secondary-1));
-    }
+.nav-link.active::before {
+    width: 100%;
+    left: 0;
+    background-color: rgb(var(--clr-neutral-2));
+}
+
+.nav-link:is(:hover, :focus)::before {
+    width: 100%;
+    left: 0;
+    height: 0.2em;
+    background-color: rgb(var(--clr-secondary-1));
 }
 
 .highlight {
@@ -290,33 +285,42 @@ footer h3 {
 }
 
 @media only screen and (max-width: 599px) {
+    /* Show hamburger menu on mobile */
+    /* ONLY when JavaScript is enabled */
     .nav-mobile {
         display: block;
     }
 
-    nav {
+    nav:not(.no-js) {
         width: 100%;
         margin: 0;
         padding: var(--nav-height) 0 0;
     }
 
-    .nav-list {
+    nav:not(.no-js) .nav-list {
         display: none;
     }
 
-    .nav-list li {
+    nav:not(.no-js) .nav-list li {
         float: none;
         padding: 0;
     }
 
-    .nav-link {
+    nav:not(.no-js) .nav-link {
         background-color: rgb(var(--clr-primary-1));
         padding: 1em;
         line-height: 2em
     }
 
-    .nav-link:is(:hover, :focus) {
+    nav:not(.no-js) .nav-link:is(:hover, :focus) {
         background-color: rgb(var(--clr-neutral-1));
+    }
+
+    /* Remove the hover/focus/active bar */
+    nav:not(.no-js) .nav-link::before,
+    nav:not(.no-js) .nav-link:is(:hover, :focus)::before {
+        height: 0;
+        width: 0;
     }
 }
 
