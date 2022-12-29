@@ -385,7 +385,7 @@ footer h3 {
     margin: 0 auto;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 60em) {
     .split {
         flex-direction: row;
     }
