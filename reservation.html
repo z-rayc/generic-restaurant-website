@@ -15,7 +15,22 @@
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <!-- Navigation for when JavaScript is disabled -->
+        <nav class="nojs">
+            <ul class="nav-list">
+                <li>
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li><a class="nav-link highlight" href="reservation.html">Reservation</a></li>
+                <li><a class="nav-link" href="contact us.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
         <h1>Reservation</h1>
         <section>
@@ -49,10 +64,17 @@
                         placeholder="Tell us anything else that might be important."></textarea>
                 </div>
                 <button type="submit">Reserve Table</button>
+                <p class="no-js-warning">⚠️ Warning: Reservation will not be registered when JavaScript is turned off.</p>
             </form>
         </section>
     </main>
+
     <footer></footer>
+
+    <script>
+        let warning = document.querySelector('.no-js-warning');
+        warning.remove();
+    </script>
 </body>
 
 </html>
